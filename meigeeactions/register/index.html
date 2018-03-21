@@ -1,0 +1,81 @@
+<div class="account-create">
+    <div class="close-button"><i class="fa fa-times"></i></div>
+    <div class="page-title">
+        <h1>Registrarse</h1>
+    </div>
+    <form action="https://www.bikingpoint.es/customer/account/createpost/" method="post" id="form-validate">
+        <div class="fieldset">
+            <input type="hidden" name="success_url" value="" />
+            <input type="hidden" name="error_url" value="" />
+            <input type="hidden" name="form_key" value="0MTFEqga5Dnlgu1R" />
+            <h2 class="legend">Información personal</h2>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="customer-name">
+                        <div class="field name-firstname">
+                            <label for="firstname" class="required"><em>*</em>Nombre</label>
+                            <div class="input-box">
+                                <input type="text" id="firstname" name="firstname" value="" title="Nombre" maxlength="255" class="input-text required-entry"  />
+                            </div>
+                        </div>
+                        <div class="field name-lastname">
+                            <label for="lastname" class="required"><em>*</em>Apellido</label>
+                            <div class="input-box">
+                                <input type="text" id="lastname" name="lastname" value="" title="Apellido" maxlength="255" class="input-text required-entry"  />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-box">
+                        <label for="email_address" class="required"><em>*</em>Dirección de correo electrónico</label>
+                        <input type="text" name="email" id="email_address" title="Dirección de correo electrónico" class="input-text validate-email required-entry" />
+                    </div>
+                </li>
+                <li class="control" style="visibility:hidden; position:absolute;">
+                    <div class="input-box">
+                        <input type="checkbox" name="is_subscribed" title="Apuntarse al boletín de noticias" value="1" id="is_subscribed" checked="checked" class="checkbox" />
+                    </div>
+                    <label for="is_subscribed">Apuntarse al boletín de noticias</label>
+                </li>
+            </ul>
+        </div>
+        <div class="fieldset">
+            <h2 class="legend">Información de Inicio de sesión</h2>
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <label for="password" class="required"><em>*</em>Contraseña</label>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" title="Contraseña" class="input-text required-entry validate-password" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="confirmation" class="required"><em>*</em>Confirmar la contraseña</label>
+                        <div class="input-box">
+                            <input type="password" name="confirmation" title="Confirmar la contraseña" id="confirmation" class="input-text required-entry validate-cpassword" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p class="required">* Campos requeridos</p>
+        <div class="clear"></div>
+        <div class="actions">
+            <div class="link-box"><a href="#">Iniciar sesión</a></div>
+            <button type="submit" title="Enviar" class="button"><span><span>Enviar</span></span></button>
+            <div class="clear"></div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        //<![CDATA[
+        var dataForm = new VarienForm('form-validate', false);
+        //]]>
+        jQuery('.account-create .link-box a').on('click', function(){
+            ajaxLogin("meigeeactions/login/index.html", true);
+            return false;
+        });
+        titleDivider();
+        loginLabel();
+    </script>
+</div>

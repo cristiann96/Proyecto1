@@ -1,0 +1,43 @@
+<div class="account-login">
+	<div class="close-button"><i class="fa fa-times"></i></div>
+	<div class="page-title">
+		<h1>Iniciar sesión</h1>
+	</div>
+	<form action="https://www.bikingpoint.es/customer/account/loginPost/" method="post" id="login-form">
+		<input name="form_key" type="hidden" value="0MTFEqga5Dnlgu1R" />
+		<p>Si tiene una cuenta con nosotros, por favor acceda con sus datos.</p>
+		<ul class="form-list">
+			<li>
+				<div class="input-box">
+					<label for="email" class="required"><em>*</em>Dirección de correo electrónico</label>
+					<input type="text" name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Dirección de correo electrónico" />
+				</div>
+			</li>
+			<li>
+				<div class="input-box">
+					<label for="pass" class="required"><em>*</em>Contraseña</label>
+					<input type="password" name="login[password]" value="" class="input-text required-entry validate-password" id="pass" title="Contraseña" />
+				</div>
+			</li>
+		</ul>
+		<p class="required">* Campos requeridos</p>
+		<div class="clear"></div>
+		<div class="actions">
+			<div class="link-box"><a href="#">Registrarse</a></div>
+			<a href="https://www.bikingpoint.es/customer/account/forgotpassword/">Olvidó su contraseña?</a>
+			<button type="submit" class="button" title="Iniciar sesión" name="send" id="send2"><span><span>Iniciar sesión</span></span></button>
+			<div class="clear"></div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		//<![CDATA[
+		var dataForm = new VarienForm('login-form', false);
+		//]]>
+		jQuery('.account-login .link-box a').on('click', function(){
+			ajaxLogin("meigeeactions/register/index.html", true);
+			return false;
+		});
+		titleDivider();
+		loginLabel();
+	</script>
+</div>
